@@ -8,20 +8,43 @@
     color: white;
     padding-top: 50px;
     height: 700px;
+
+    #developer {
+        font-size: 80px;
+        padding: 20px;
+        margin-top: 200px;
+        margin-left: 100px;
+        font-family: Futura;    
+    }
+    
+    .actor__content {
+      flex-grow: 1;
+    }
+    .actor__content::after {
+      content: '|';
+      animation: blink 500ms infinite;
+    }
+
+    #emblem {
+        margin-top: 200px;
+        position: relative;
+        max-width: auto; 
+        max-height: auto;   
+    }
 }
 
-.actor__content {
-  flex-grow: 1;
-}
 
-.actor__content::after {
-  content: '|';
-  animation: blink 500ms infinite;
-}
  
 #about {
     background-color: #eeeeee;
-    height: 700px;
+    height: 600px;
+
+    #job-description {
+        font-family: Avenir;
+        font-size: 60pt;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
  
 #works {
