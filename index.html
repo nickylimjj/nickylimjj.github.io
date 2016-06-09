@@ -1,9 +1,79 @@
 ---
 layout: default
 ---
+<!--landing-page -->
+<div class="container-fluid" id="landing-page">
 
+    <!-- Title -->
+    <div class="row">
+        <div class="container-fluid">
+            <div id="developer" class="actor__content" ></div>
+            <script>
+                var theater = theaterJS()
+                theater
+                .on('type:start, erase:start', function () {
+                    // add a class to actor's dom element when he starts typing/erasing
+                    var actor = theater.getCurrentActor()
+                    actor.$element.classList.add('blinking-caret')
+                    })
+                .on('type:end, erase:end', function () {
+                    // and then remove it when he's done
+                    var actor = theater.getCurrentActor()
+                    actor.$element.classList.remove('blinking-caret')
+                    })
+
+                theater
+                .addActor('developer',{ accuracy: 1.0, speed: 0.9 })
+
+                theater
+                .addScene('developer:Developer', 400)
+                .addScene(theater.replay)
+            </script>
+        </div>
+    </div>
+        
+</div>
+<!--about-->
+<div class="container-fluid panel" id="about">
+    <p>about</p>
+    
+</div>
+<!--work-->
+<div class="container-fluid panel" id="works">
+    <p style="color:#ffffff">work</p>
+</div>
+<!--project-->
+<div class="container-fluid panel" id="projects">
+    <p>project</p>
+</div>
+<!--contact-->
+<div class="container-fluid panel" id="contact">
+    <p>contact</p>
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="contact-list">
+                <li>{{ site.title }}</li>
+                <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            </ul>
+            <ul class="social-media-list">
+                {% if site.github_username %}
+                    <li>
+                        {% include icon-github.html username=site.github_username %}
+                    </li>
+                {% endif %}
+                {% if site.twitter_username %}
+                    <li>
+                        {% include icon-twitter.html username=site.twitter_username %}
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="col-md-3">
+            {{ site.description }}
+            
+        </div>
+    </div>
+</div>
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 <div class="home">
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>

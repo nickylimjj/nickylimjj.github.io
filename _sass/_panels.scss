@@ -1,0 +1,41 @@
+.panel {
+    padding-top: 50px;
+    margin: 0px;
+}
+
+#landing-page {
+    background-color: #111111;
+    color: white;
+    padding-top: 50px;
+    height: 700px;
+}
+
+.actor__content {
+  flex-grow: 1;
+}
+
+.actor__content::after {
+  content: '|';
+  animation: blink 500ms infinite;
+}
+ 
+#about {
+    background-color: #eeeeee;
+    height: 700px;
+}
+ 
+#works {
+    background-color: #333333;
+    height: 700px;
+}
+
+#projects {
+    background-color: #cccccc;
+    height: 700px;
+}
+ 
+#contact {
+    background-color: #666666;
+    height: 700px;
+
+}
