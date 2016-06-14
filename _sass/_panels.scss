@@ -1,6 +1,18 @@
 .panel {
     padding-top: 50px;
+    width: 100%;
     margin: 0px;
+}
+
+h1 {
+    font-family: Futura;
+    font-size: 8vw;
+    color: white;
+
+}
+
+.margin-btm-20 {
+    margin-bottom: 2cm;
 }
 
 #landing-page {
@@ -9,7 +21,7 @@
     padding-top: 50px;
     height: 700px;
 
-    #developer {
+    #stage {
         font-size: 80px;
         padding: 20px;
         margin-top: 200px;
@@ -17,9 +29,6 @@
         font-family: Futura;    
     }
     
-    .actor__content {
-      flex-grow: 1;
-    }
     .actor__content::after {
       content: '|';
       animation: blink 500ms infinite;
@@ -33,17 +42,25 @@
     }
 }
 
-
  
 #about {
     background-color: #eeeeee;
     height: 600px;
+    font-family: Avenir;
 
     #job-description {
-        font-family: Avenir;
-        font-size: 60pt;
+        font-size: 5vw;
         width: 100%;
         margin: 0 auto;
+    }
+
+    .btn-custom {
+        background-color: #ffba00;
+        color: #000000;
+        border: 0px;
+        padding: 18px 28px;
+        font-size: 2vw;
+        border-radius: 8px;
     }
 }
  

@@ -2,13 +2,25 @@
 layout: default
 ---
 <!--landing-page -->
-<div class="container-fluid" id="landing-page">
+<div class="container panel" id="landing-page">
     <div class="row">
+
         <!-- Title -->
         <div class="col-md-8">
-            <div id="developer" class="actor__content" ></div>
+            <div id="stage" class="actor__content" ></div>
             <script>
-                var theater = theaterJS()
+                var theater = theaterJS({
+                  "minSpeed": {
+                    "erase": 80,
+                    "type": 80
+                  },
+
+                  "maxSpeed": {
+                    "erase": 100,
+                    "type": 350
+                  }
+                })
+
                 theater
                     .on('type:start, erase:start', function () {
                         // add a class to actor's dom element when he starts typing/erasing
@@ -22,13 +34,19 @@ layout: default
                         })
 
                 theater
-                    .addActor('developer',{ accuracy: 1.0, speed: 0.7 })
+                    .addActor('stage',{ accuracy: 1.0, speed: 0.7 })
 
                 theater
-                    .addScene('developer:Developer', 400)
+                    .addScene('stage:Software Engineer', 400)
+                    .addScene(1000)
+                    .addScene('stage:Tech Enthusiast', 400)
+                    .addScene(1000)
+                    .addScene('stage:Graphic Designer', 400)
+                    .addScene(1000)
                 .addScene(theater.replay)
             </script>
         </div>
+        <!-- end title -->
 
         <div class="col-md-4" id="emblem">
             <img src="assets/emblem.png" class="img-responsive"></img>
@@ -37,56 +55,94 @@ layout: default
 </div> <!-- end container -->    
 
 <!--about-->
-<div class="container-fluid panel" id="about">
-    <div class="row">
-        <div id="job-description">
+<div class="container panel" id="about">
+    <div class="row" style="margin-bottom: 6vw;">
+        <div id="job-description" align="middle">
             
             <p>"</p>
-            <p>Emotional Job Description</p>
+            <p>I explore computers to redefine living</p>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-1 col-md-offset-8">
-            <button type="button" class="btn btn-lg btn-info">Cover Letter</button>
+        <div class="col-lg-1 col-md-offset-9">
+            <button type="button" class="btn btn-custom">Cover Letter</button>
         </div>
     </div>
 </div>
 
 <!--work-->
-<div class="container-fluid panel" id="works">
+<div class="container panel" id="works">
     <div class="row">
 
-        <div class="col-md-3">
-            <svg height="100" width="100">
-                <circle cx="50" cy="50" r="40" stroke-width="0" fill="#ffba00" />
-            </svg>
-            
+    <h1>Work Experience</h1>
 
-             <a href="#" class="thumbnail">
-                <img src="assets/sup-logo.png"></img>
-            </a>
-        </div>
+        <!-- sup -->
+        <div class="col-lg-2 col-sm-6 col-xs-12 col-lg-offset-2">
+            <div class="hovereffect">
+                <img class="img-responsive" src="assets/sup-logo.png" align="middle">
+                <div class="overlay">
+                    <h2>Sup the App</h2>
+                    <p>
+                        <a href="#"></a>
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <!-- end sup -->
 
-        <div class="col-md-3">
-            <img src="assets/weinhaus-logo.png"></img>
-        </div>
+        <!-- weinhaus -->
+        <div class="col-lg-2 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive" src="assets/weinhaus-logo.png" align="middle">
+                <div class="overlay">
+                    <h2>WeinHaus</h2>
+                    <p>
+                        <a href="#"></a>
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <!-- end weinhaus -->
 
-        <div class="col-md-3">
-            <img src="assets/saf-logo.png"></img>
-        </div>
+        <!-- saf -->
+        <div class="col-lg-2 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive" src="assets/saf-logo.png" align="middle">
+                <div class="overlay">
+                    <h2>Singapore Armed Forces</h2>
+                    <p>
+                        <a href="#"></a>
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <!-- end saf -->
 
-        <div class="col-md-3">
-            <img src="assets/sup-logo.png"></img>
-        </div>
+        <!-- a-star -->
+        <div class="col-lg-2 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive" src="assets/sup-logo.png" align="middle">
+                <div class="overlay">
+                    <h2>A*STAR</h2>
+                    <p>
+                        <a href="#"></a>
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <!-- end a-star -->
+
     </div>
 </div>
+
 <!--project-->
-<div class="container-fluid panel" id="projects">
+<div class="container panel" id="projects">
     <p>project</p>
 </div>
+
 <!--contact-->
-<div class="container-fluid panel" id="contact">
+<div class="container panel" id="contact">
     <p>contact</p>
     <div class="row">
         <div class="col-md-3">
