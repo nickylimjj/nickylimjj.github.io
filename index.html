@@ -37,18 +37,18 @@ layout: default
                     .addActor('stage',{ accuracy: 1.0, speed: 0.7 })
 
                 theater
-                    .addScene('stage:Software Engineer', 400)
-                    .addScene(1000)
                     .addScene('stage:Tech Enthusiast', 400)
                     .addScene(1000)
-                    .addScene('stage:Graphic Designer', 400)
+                    .addScene('stage:Developer', 400)
+                    .addScene(1000)
+                    .addScene('stage:Graphics Designer', 400)
                     .addScene(1000)
                 .addScene(theater.replay)
             </script>
         </div>
         <!-- end title -->
 
-        <div class="col-md-4" id="emblem">
+        <div class="col-xs-4" id="emblem">
             <img src="assets/emblem.png" class="img-responsive"></img>
         </div>
     </div> 
@@ -138,12 +138,12 @@ layout: default
 
 <!--project-->
 <div class="container panel" id="projects">
-    <p>project</p>
+    <h1>project</h1>
 </div>
 
 <!--contact-->
 <div class="container panel" id="contact">
-    <p>contact</p>
+    <h1>contact</h1>
     <div class="row">
         <div class="col-md-3">
             <ul class="contact-list">
@@ -156,11 +156,7 @@ layout: default
                         {% include icon-github.html username=site.github_username %}
                     </li>
                 {% endif %}
-                {% if site.twitter_username %}
-                    <li>
-                        {% include icon-twitter.html username=site.twitter_username %}
-                    </li>
-                {% endif %}
+
             </ul>
         </div>
         <div class="col-md-3">
