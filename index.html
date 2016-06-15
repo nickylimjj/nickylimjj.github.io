@@ -6,7 +6,7 @@ layout: default
     <div class="row">
 
         <!-- Title -->
-        <div class="col-md-8">
+        <div class="col-sm-8">
             <div id="stage" class="actor__content" ></div>
             <script>
                 var theater = theaterJS({
@@ -78,7 +78,7 @@ layout: default
     <h1>Work Experience</h1>
 
         <!-- sup -->
-        <div class="col-lg-2 col-sm-6 col-xs-12 col-lg-offset-2">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
             <div class="hovereffect">
                 <img class="img-responsive" src="assets/sup-logo.png" align="middle">
                 <div class="overlay">
@@ -92,7 +92,7 @@ layout: default
         <!-- end sup -->
 
         <!-- weinhaus -->
-        <div class="col-lg-2 col-sm-6 col-xs-12">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
             <div class="hovereffect">
                 <img class="img-responsive" src="assets/weinhaus-logo.png" align="middle">
                 <div class="overlay">
@@ -106,7 +106,7 @@ layout: default
         <!-- end weinhaus -->
 
         <!-- saf -->
-        <div class="col-lg-2 col-sm-6 col-xs-12">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
             <div class="hovereffect">
                 <img class="img-responsive" src="assets/saf-logo.png" align="middle">
                 <div class="overlay">
@@ -118,20 +118,6 @@ layout: default
             </div>
         </div> 
         <!-- end saf -->
-
-        <!-- a-star -->
-        <div class="col-lg-2 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive" src="assets/sup-logo.png" align="middle">
-                <div class="overlay">
-                    <h2>A*STAR</h2>
-                    <p>
-                        <a href="#"></a>
-                    </p>
-                </div>
-            </div>
-        </div> 
-        <!-- end a-star -->
 
     </div>
 </div>
@@ -145,26 +131,40 @@ layout: default
 <div class="container panel" id="contact">
     <h1>contact</h1>
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 col-md-offset-1">
             <ul class="contact-list">
                 <li>{{ site.title }}</li>
                 <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             </ul>
             <ul class="social-media-list">
-                {% if site.github_username %}
+                {% if site.username %}
                     <li>
-                        {% include icon-github.html username=site.github_username %}
+                        {% include icon-github.html username=site.username %}
                     </li>
                 {% endif %}
-
             </ul>
         </div>
-        <div class="col-md-3">
-            {{ site.description }}
+        <div class="col-md-6">
+            <form>
+                <fieldset class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control form-small" id="exampleInputEmail1" placeholder="Enter email">
+                    <small class="text-muted" style="color: black;">We'll never share your email with anyone else.</small>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="email" class="form-control form-small" id="exampleInputEmail1" placeholder="Subject">
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="10"></textarea>
+                </fieldset>
+          
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
             
         </div>
     </div>
-</div>
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-<div class="home">
 </div>

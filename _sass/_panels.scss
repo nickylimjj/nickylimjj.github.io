@@ -1,5 +1,5 @@
 .panel {
-    padding-top: 50px;
+    padding: 50px;
     width: 100%;
     margin: 0px;
 }
@@ -12,21 +12,15 @@ h1 {
 
 }
 
-.margin-btm-20 {
-    margin-bottom: 2cm;
-}
-
 #landing-page {
     background-color: #111111;
     color: white;
-    padding-top: 50px;
-    height: 700px;
+    padding: 50px auto;
 
     #stage {
-        font-size: 6vw;
+        font-size: 5vw;
         padding: 1.5vw;
-        margin-top: 15vw;
-        margin-left: 7.6vw;
+        margin: 0 auto;
         font-family: Futura;    
     }
     
@@ -36,7 +30,7 @@ h1 {
     }
 
     #emblem {
-        margin-top: 200px;
+        margin: 10px auto;
         position: relative;
         max-width: 100vw; 
         height: auto;   
@@ -46,7 +40,6 @@ h1 {
  
 #about {
     background-color: #eeeeee;
-    height: 600px;
     font-family: Avenir;
 
     #job-description {
@@ -67,20 +60,27 @@ h1 {
  
 #works {
     background-color: #333333;
-    height: 700px;
 
     img {
-        display: block
+        height: 30vh;
+        width: auto;
+        margin: 10vh auto;
     }
 }
 
 #projects {
     background-color: #cccccc;
-    height: 700px;
 }
  
 #contact {
     background-color: #666666;
-    height: 700px;
 
+    .form-small {
+        width: 30%;
+    }
+
+    label {
+        color: white;
+        font-weight: 500;
+    }
 }

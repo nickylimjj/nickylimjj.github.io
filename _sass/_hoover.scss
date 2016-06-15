@@ -1,13 +1,17 @@
 // credits to hoover gallery by Mike Young https://miketricking.github.io/dist/
 
 .hovereffect {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 60%;
   float: left;
   overflow: hidden;
   position: relative;
   text-align: center;
+  align: center;
+  display: block;
   cursor: default;
+  background: #ffba00;
+  margin: 10px auto;
 }
 
 .hovereffect .overlay {
