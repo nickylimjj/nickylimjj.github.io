@@ -40,7 +40,41 @@ $bar-height:       50px;
 // Import partials from the `minima` theme.
 @import "minima";
 
-.color-bar {
-    background-color: $brand-color;
-    height: $bar-height
+body {
+    border-top: 8px solid #A0A0A0;
+}
+
+.container-fluid {
+    padding-top: 50px;
+}
+.post-date {
+    font-style: italic;
+    color: $grey-color;
+}
+
+.header-pic {
+    max-width: 239px;
+}
+
+h1, h2, h3 {
+    font-family: "futura-pt-1","futura-pt-2",helvetica,arial,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: $grey-color-dark;
+}
+
+#bash {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul#bash > li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+ul#bash > li:before {
+  content: "$";
+  padding-right: 4px;
 }

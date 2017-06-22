@@ -1,3 +1,20 @@
 ---
 layout: default
+title: Home
+permalink: /
 ---
+{% for post in site.posts limit:1 %}
+    <div class="row">
+        <h1> {{ post.title }} </h1>
+        <span class="post-date"> {{ post.date | date_to_string }} </span>
+        {{ post.content }}
+    </div>
+
+    <div class="PageNavigation">
+      {% if post.previous.url %}
+        <a class="prev" href="{{post.previous.url}}">&laquo; {{post.previous.title}}</a>
+      {% endif %}
+      {% if post.next.url %}
+        <a class="next" href="{{post.next.url}}">{{post.next.title}} &raquo;</a>
+      {% endif %}
+{% endfor %}
