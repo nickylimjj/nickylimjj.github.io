@@ -15,6 +15,7 @@ Topics I hope to cover:
     * schneider
 * [ ] phishing
 * [ ] the pattern and all encompasing overview of hackers
+* [ ] comment on custom adblocker++ using [this](https://itchy.nl/raspberry-pi-3-with-openvpn-pihole-dnscrypt)
 
 # Systems specific
 * [ ] Our internet
