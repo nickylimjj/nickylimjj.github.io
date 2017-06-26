@@ -15,9 +15,15 @@ The Miniature Schnauzer is a breed of small dog of the Schnauzer type that origi
 
 [todo]: # (Insert Miniature Schnauzer generator)
 
-I am a big fan of Computer Security, from the inner workings of computing systems and exploits to the global conversation of it today. This is therefore, going to be a blog about Computer Security News. I could attempt to make a link between the aforementioned Miniature Schnauzers and guarding our cyber space, or their color with black/white hat hacking, but I included that because I grew up with Miniature Schnauzers and find them super cute.
+Hi!
 
-I hope to provide some sense-making to the complexities of a cyber attack and comment on the state of Computer Security today. I may also include some SEA/Singaporean context since I am from here.
+I am a big fan of Computer Security, from the inner workings of computing systems and exploits to the global conversation of it today. This is therefore, going to be a blog about **Computer Security and Systems**. I could attempt to make a link between the aforementioned Miniature Schnauzers and guarding our cyber space, or their color with black/white hat hacking, but I included that because I grew up with Miniature Schnauzers and find them super cute.
+
+I hope to provide some sense-making to the complexities of a cyber attack. I hope to comment on the state of Computer Security today and where we are headed tomorrow. I may also include some SEA/Singaporean context since I am from here.
+
+I strongly believe that in understanding Computer Security, you got to understand Computer Systems. It is incredibly complicated stuff -- *comping from a Computer Engineering student* -- but it is tremendously exciting and important. I hope to shed some light to the techies and the casual citizen on how the devices you use everyday work. Perhaps that way, you can also understand its vulnerabilties.
+
+I must warn you beforehand that this is not the place for breaking news. I do not blog as responsively and you are better off reading the Newspaper for that.
 
 I will aim to get one post/week and please subscribe if you like it!
 

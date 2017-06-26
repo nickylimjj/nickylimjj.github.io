@@ -11,6 +11,9 @@ title: Posts
             <h1> {{ post.title }} </h1>
             <span class="post-date"> {{ post.date | date_to_string }} </span>
             {{ post.content }}
+
+            <hr>
+            
         </div>
     {% endfor %}
 </ul>
