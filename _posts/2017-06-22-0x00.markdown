@@ -1,0 +1,19 @@
+---
+layout: post
+title:  '0x00'
+date:   2017-06-22 22:26:03 +0800
+categories: jekyll update
+published: true
+---
+{% highlight none %}
+$ echo "Hello There"
+$
+         __
+   (___()'`;
+   /,    /`
+   \\"--\\
+{% endhighlight %}
+
+After much procrastination, I have finally gotten my blog up! I've thought of this for several months now and wanted to start a technical blog on something I am passionate in. In this case, it is on Computer Security. I will comment on other interesting stuff though, I will just use appropriate `tags` so that you guys can filter based on your interest. Once I get the tag system up, I'll create a post too.
+
+The hardest part was sort of picking a design and get some of the overhead write ups done. I build the website from ground up using several basic frameworks (thank you Jekyll and Bootstrap) because I am familiar with those. The design is heavily borrowed from [here](https://sockpuppet.org) because I simply love how it is a no-nonsense (style-wise) design that zooms in on the posts. After all, most of you should get your dose of articles through a news reader, right? Because you subscribe, right? I recommend [feedly](https://feedly.com/). You can subscribe by hitting [subscribe](http://localhost:4000/feed.xml) here or below and adding that link (it should end with .xml) to your news reader.

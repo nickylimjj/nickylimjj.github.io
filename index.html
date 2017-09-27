@@ -1,170 +1,21 @@
 ---
 layout: default
+title: Home
+permalink: /
 ---
-<!--landing-page -->
-<div class="container panel" id="landing-page">
+{% for post in site.posts limit:1 %}
     <div class="row">
-
-        <!-- Title -->
-        <div class="col-sm-8">
-            <div id="stage" class="actor__content" ></div>
-            <script>
-                var theater = theaterJS({
-                  "minSpeed": {
-                    "erase": 80,
-                    "type": 80
-                  },
-
-                  "maxSpeed": {
-                    "erase": 100,
-                    "type": 350
-                  }
-                })
-
-                theater
-                    .on('type:start, erase:start', function () {
-                        // add a class to actor's dom element when he starts typing/erasing
-                        var actor = theater.getCurrentActor()
-                        actor.$element.classList.add('blinking-caret')
-                        })
-                    .on('type:end, erase:end', function () {
-                        // and then remove it when he's done
-                        var actor = theater.getCurrentActor()
-                        actor.$element.classList.remove('blinking-caret')
-                        })
-
-                theater
-                    .addActor('stage',{ accuracy: 1.0, speed: 0.7 })
-
-                theater
-                    .addScene('stage:Tech Enthusiast', 400)
-                    .addScene(1000)
-                    .addScene('stage:Developer', 400)
-                    .addScene(1000)
-                    .addScene('stage:Graphics Designer', 400)
-                    .addScene(1000)
-                .addScene(theater.replay)
-            </script>
-        </div>
-        <!-- end title -->
-
-        <div class="col-xs-4" id="emblem">
-            <img src="assets/emblem.png" class="img-responsive"></img>
-        </div>
-    </div> 
-</div> <!-- end container -->    
-
-<!--about-->
-<div class="container panel" id="about">
-    <div class="row" style="margin-bottom: 6vw;">
-        <div id="job-description" align="middle">
-            
-            <p>"</p>
-            <p>I explore computers to redefine living</p>
-        </div>
+        <h1> {{ post.title }} </h1>
+        <span class="post-date"> {{ post.date | date_to_string }} </span>
+        {{ post.content }}
     </div>
 
-    <div class="row">
-        <div class="col-lg-1 col-md-offset-9">
-            <button type="button" class="btn btn-custom">Cover Letter</button>
-        </div>
-    </div>
-</div>
 
-<!--work-->
-<div class="container panel" id="works">
-    <div class="row">
-
-    <h1>Work Experience</h1>
-
-        <!-- sup -->
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive" src="assets/sup-logo.png" align="middle">
-                <div class="overlay">
-                    <h2>Sup the App</h2>
-                    <p>
-                        <a href="#"></a>
-                    </p>
-                </div>
-            </div>
-        </div> 
-        <!-- end sup -->
-
-        <!-- weinhaus -->
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive" src="assets/weinhaus-logo.png" align="middle">
-                <div class="overlay">
-                    <h2>WeinHaus</h2>
-                    <p>
-                        <a href="#"></a>
-                    </p>
-                </div>
-            </div>
-        </div> 
-        <!-- end weinhaus -->
-
-        <!-- saf -->
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-            <div class="hovereffect">
-                <img class="img-responsive" src="assets/saf-logo.png" align="middle">
-                <div class="overlay">
-                    <h2>Singapore Armed Forces</h2>
-                    <p>
-                        <a href="#"></a>
-                    </p>
-                </div>
-            </div>
-        </div> 
-        <!-- end saf -->
-
-    </div>
-</div>
-
-<!--project-->
-<div class="container panel" id="projects">
-    <h1>project</h1>
-</div>
-
-<!--contact-->
-<div class="container panel" id="contact">
-    <h1>contact</h1>
-    <div class="row">
-        <div class="col-md-3 col-md-offset-1">
-            <ul class="contact-list">
-                <li>{{ site.title }}</li>
-                <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            </ul>
-            <ul class="social-media-list">
-                {% if site.username %}
-                    <li>
-                        {% include icon-github.html username=site.username %}
-                    </li>
-                {% endif %}
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <form>
-                <fieldset class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control form-small" id="exampleInputEmail1" placeholder="Enter email">
-                    <small class="text-muted" style="color: black;">We'll never share your email with anyone else.</small>
-                </fieldset>
-
-                <fieldset class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="email" class="form-control form-small" id="exampleInputEmail1" placeholder="Subject">
-                </fieldset>
-
-                <fieldset class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="10"></textarea>
-                </fieldset>
-          
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            
-        </div>
-    </div>
-</div>
+    <div class="PageNavigation">
+      {% if post.previous.url %}
+        <a class="prev" href="{{post.previous.url}}">&laquo; {{post.previous.title}}</a>
+      {% endif %}
+      {% if post.next.url %}
+        <a class="next" href="{{post.next.url}}">{{post.next.title}} &raquo;</a>
+      {% endif %}
+{% endfor %}

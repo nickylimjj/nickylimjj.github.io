@@ -3,8 +3,6 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
@@ -16,7 +14,7 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      #df0104;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -28,8 +26,9 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+$bar-height:       50px;
 
-
+// Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -37,20 +36,45 @@ $on-laptop:        800px;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+
+// Import partials from the `minima` theme.
+@import "minima";
+
+body {
+    border-top: 8px solid #A0A0A0;
 }
 
+.container-fluid {
+    padding-top: 50px;
+}
+.post-date {
+    font-style: italic;
+    color: $grey-color;
+}
 
+.header-pic {
+    max-width: 239px;
+}
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting",
-        "panels",
-        "navbar",
-        "hoover"
-;
+h1, h2, h3 {
+    font-family: "futura-pt-1","futura-pt-2",helvetica,arial,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: $grey-color-dark;
+}
+
+#bash {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul#bash > li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+ul#bash > li:before {
+  content: "$";
+  padding-right: 4px;
+}
