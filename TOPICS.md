@@ -25,8 +25,10 @@ Topics I hope to cover:
 # Systems specific
 * [ ] Our internet
 * [ ] Blockchains/ bitcoin
+* [ ] bash prompt customization
 
 # Development specific
+* [ ] change to personal-site priority
 * [ ] building my website
 * [ ] scale of numbers - to make sense of stats!
 * [ ] some ML stuff
