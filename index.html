@@ -3,19 +3,28 @@ layout: default
 title: Home
 permalink: /
 ---
-{% for post in site.posts limit:1 %}
-    <div class="row">
-        <h1> {{ post.title }} </h1>
-        <span class="post-date"> {{ post.date | date_to_string }} </span>
-        {{ post.content }}
-    </div>
 
+<h1> {{ site.title }} </h1>
 
-    <div class="PageNavigation">
-      {% if post.previous.url %}
-        <a class="prev" href="{{post.previous.url}}">&laquo; {{post.previous.title}}</a>
-      {% endif %}
-      {% if post.next.url %}
-        <a class="next" href="{{post.next.url}}">{{post.next.title}} &raquo;</a>
-      {% endif %}
-{% endfor %}
+<!--my photo-->
+<img class="profile-img" src="/assets/profile-img.jpg"/><br>
+
+<p>
+I am a final year Computer Engineering student in University of Illinois - Urbana Champaign. I am from Singapore and am currently pursuing my undergradute degree until May 2018. My academic interests are in Network Security and Algorithms Design.
+
+{{ site.category }}
+</p>
+
+<!--TODO: resume-->
+
+<!--TODO: get started on projects-->
+{% if site.projects == ""%}
+    <h2> Current Projects </h2>
+    {% for proj in site.projects %}
+        <div class="row">
+            <ul>
+            <li> {{ proj.title }} </li>
+            </ul
+        </div>
+    {% endfor %}
+{% endif %}
