@@ -4,6 +4,8 @@ layout: page
 title: About
 ---
 
+<img src="/assets/5.jpg" class="header-pic"/>
+
 <h3>Miniature Schnauzer</h3>
 
 <small><rt><nobr>/ˈmɪnɪtʃə ˈʃnaʊzə/</nobr></rt></small>\
