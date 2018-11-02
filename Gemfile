@@ -11,7 +11,8 @@ ruby RUBY_VERSION
 # Happy Jekylling!
 gem "jekyll"
 
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
+# This is the default theme for new Jekyll sites.
+# You may change this to anything you like.
 gem "minima"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -24,3 +25,6 @@ gem "minima"
 # end
 
 gem "jekyll-redirect-from"
+
+# CMS-style graphical interface to author content and administer Jekyll sites 
+gem 'jekyll-admin', group: :jekyll_plugins
